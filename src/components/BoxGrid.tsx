@@ -12,7 +12,10 @@ export const BoxGrid: React.FC<BoxGridProps> = ({ onBack }) => {
   return (
     <div className="min-h-screen bg-zinc-950 p-8 relative font-serif overflow-hidden flex flex-col items-center justify-center">
        {/* Custom Ghost Background Image */}
-       <div className="absolute inset-0 bg-[url('/images/ghost-bg.jpg')] bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none z-0" />
+       <div 
+         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none z-0" 
+         style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/ghost-bg.jpg')` }}
+       />
 
        {/* Fog & Darkness */}
        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none z-0" />

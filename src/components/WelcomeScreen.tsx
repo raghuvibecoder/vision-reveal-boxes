@@ -11,7 +11,10 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-zinc-950 p-6 relative overflow-hidden font-serif">
       {/* Custom Ghost Background Image */}
-      <div className="absolute inset-0 bg-[url('/images/ghost-bg.jpg')] bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100 pointer-events-none" 
+        style={{ backgroundImage: `url('${import.meta.env.BASE_URL}images/ghost-bg.jpg')` }}
+      />
       
       {/* Fog/Darkness */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 pointer-events-none" />
